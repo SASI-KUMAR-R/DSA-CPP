@@ -7,6 +7,9 @@ int main()
     std::vector<int> v;
     v.push_back(10);
     v.emplace_back(20);
+    v.emplace_back(30);
+    v.emplace_back(40);
+    v.emplace_back(50);
 
     // 2. Array With PAIRS
     std::vector<std::pair<int, int>> vec;
@@ -22,6 +25,8 @@ int main()
     // 5. Copying the vector to vector
     std::vector<int> x(5, 10);
     std::vector<int> y(x);
+
+// -------------------------------------------------------------------------------------------- // 
 
     // 6. pointing the array at front
     std::vector<int>::iterator it = v.begin();
@@ -39,7 +44,22 @@ int main()
     for (auto i = v.begin(); i != v.end(); i++)
         std::cout << *(i) << " " << std::endl;
 
+// -------------------------------------------------------------------------------------------- // 
 
+    // 9. Erase
+    v.erase(v.begin() + 1); // Only One single element will be deleted 
+
+    // 10. Erase from start to end 
+    v.erase(v.begin()+1,v.end()-1) ; 
+
+// -------------------------------------------------------------------------------------------- // 
+   
+   // 11. Inserting a Element
+   v.insert(v.begin(),11) ; // inserting a 0-indexc
+
+
+    
+    
     // IMPORTANT : 
     // 1. if we using "Iterator" Means -> Use "POINTER"
 }
