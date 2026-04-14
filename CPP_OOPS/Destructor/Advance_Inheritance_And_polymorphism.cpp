@@ -1,6 +1,6 @@
 #include <iostream>
 
-class Student {
+class Student {s
     public : 
         virtual ~Student() {}
         virtual void Study() = 0 ; 
